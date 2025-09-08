@@ -1,0 +1,41 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 25,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "idf",
+      "description": "ESP-IDF preset for any selected project",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "/opt/esp/idf/tools/cmake/toolchain-esp32.cmake",
+        "IDF_PATH": "/opt/esp/idf",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "Python3_EXECUTABLE": "/opt/esp/python_env/idf5.5_py3.12_env/bin/python",
+        "CMAKE_C_COMPILER": "/opt/esp/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-gcc",
+        "CMAKE_CXX_COMPILER": "/opt/esp/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-g++"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "build",
+      "configurePreset": "idf"
+    },
+    {
+      "name": "flash",
+      "configurePreset": "idf",
+      "targets": ["flash"]
+    },
+    {
+      "name": "monitor",
+      "configurePreset": "idf",
+      "targets": ["monitor"]
+    }
+  ]
+}

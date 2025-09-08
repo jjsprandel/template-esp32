@@ -19,4 +19,5 @@
         "main.h": "c"
     },
     "idf.pythonInstallPath": "/usr/bin/python3",
+    "cmake.sourceDirectory": "/project/projects/project1",
 }

@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/ubuntu
 {
-	"name": "SCAN",
+	"name": "ESP32",
     "image": "jjsprandel/scan:v1.0", 
 	// Add the IDs of extensions you want installed when the container is created
     "workspaceMount": "source=${localWorkspaceFolder},target=/project,type=bind",
@@ -11,6 +11,7 @@
     ],
 	"initializeCommand": "python ${localWorkspaceFolder}/tools/scripts/start_server.py --non-interactive",
 	"postCreateCommand": "/bin/bash -c 'echo \"source /opt/esp/entrypoint.sh\" >> ~/.bashrc && echo \"set +e\" >> ~/.bashrc && source ~/.bashrc'",
+
 	"customizations": {
 		"vscode": {
 			"settings": {
@@ -24,14 +25,15 @@
 				"idf.flashType": "UART",
 				"idf.deleteComponentsOnFullClean": true,
 				"idf.enableCCache": true,
-				"idf.saveBeforeBuild": true
+				"idf.saveBeforeBuild": true,
+				"cmake.cmakePath": "/opt/esp/tools/cmake/3.30.2/bin/cmake"
 			},
 			"extensions": [
 				"ms-vscode.cpptools",
-				"espressif.esp-idf-extension",
 				"ms-vscode.cpptools-extension-pack",
 				"ms-vscode.cpptools-themes",
-				"github.vscode-github-actions"
+				"github.vscode-github-actions",
+				"ms-vscode.cmake-tools"
 			]
 		}
 	},

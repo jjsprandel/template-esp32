@@ -5,15 +5,15 @@
 cmake_minimum_required(VERSION 3.16)
 
 set(EXTRA_COMPONENT_DIRS
-    "$ENV{PROJECT_DIR}/src/app/main"
+    "$ENV{PROJECT_DIR}/projects/project2/src/app/main"
 )
 
 set(COMPONENT_DIRS 
     "$ENV{IDF_PATH}/components"
-    "$ENV{PROJECT_DIR}/src/app"
-    "$ENV{PROJECT_DIR}/src/app/device_drivers"
+    "$ENV{PROJECT_DIR}/projects/project2/src/app"
+    "$ENV{PROJECT_DIR}/projects/project2/src/app/device_drivers"
     "$ENV{EXTRA_COMPONENT_DIRS}"
 )
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(SCAN)
+project(project2)
