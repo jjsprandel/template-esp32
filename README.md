@@ -1,10 +1,11 @@
+
 # ESP32 Project Template for ESP-IDF
 
 This repository is a template for developing multiple ESP32 projects using the ESP-IDF framework. Each project lives in its own folder under `project/projects/`, and the workspace is designed for rapid prototyping, testing, and CI automation.
 
 ---
 
-## � Features
+## Features
 
 - Supports multiple independent ESP-IDF projects in `project/projects/`
 - Modern dev container setup for VS Code
@@ -19,7 +20,7 @@ This repository is a template for developing multiple ESP32 projects using the E
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 project/
@@ -42,12 +43,17 @@ project/
 
 ---
 
-## �️ Getting Started
+## Getting Started
 
-1. **Clone the repository**
-2. **Open in VS Code** (recommended: use the dev container)
-3. **Add a new project** under `project/projects/` (copy an existing project as a template)
-4. **Build, flash, and test** using ESP-IDF tasks or the provided scripts
+1. **Install Required Software**
+   - [Docker Desktop](https://www.docker.com/products/docker-desktop) (for containerized builds)
+   - [Visual Studio Code](https://code.visualstudio.com/) (recommended IDE)
+   - [CP210x USB to UART Bridge VCP drivers](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) (for Windows; Linux drivers are built-in)
+2. **Clone the repository**
+3. **Open in VS Code** (recommended: use the dev container)
+4. **Connect your ESP32 device** (install drivers if needed)
+5. **Add a new project** under `project/projects/` (copy an existing project as a template)
+6. **Build, flash, and test** using ESP-IDF tasks or the provided scripts
 
 ### Example Commands
 
@@ -65,7 +71,7 @@ idf.py test
 
 ---
 
-## 🤖 Continuous Integration (CI)
+## Continuous Integration (CI)
 
 GitHub Actions automatically run for each project when its files change:
 
@@ -78,7 +84,7 @@ CI is configured to only run jobs for projects with changes, keeping builds fast
 
 ---
 
-## 🧩 Adding a New Project
+## Adding a New Project
 
 1. Create a new folder under `project/projects/` (e.g., `project3`)
 2. Add a `CMakeLists.txt` and source files
@@ -87,22 +93,24 @@ CI is configured to only run jobs for projects with changes, keeping builds fast
 
 ---
 
-## 📦 Dependencies & Tools
+## Dependencies & Tools
 
-- **ESP-IDF** (see `.devcontainer/devcontainer.json` for version)
-- **Docker** (for reproducible builds)
-- **VS Code** (with ESP-IDF extension)
-- **CMake**, **Ninja**, **clang-tidy**, **QEMU**, **Wokwi**
-
----
-
-## 🏁 Origin
-
-This template was originally forked and adapted from the [SCAN ESP32 Firmware repository](https://github.com/jjsprandel/SCAN).
+* **ESP-IDF** (see `.devcontainer/devcontainer.json` for version)
+* **Docker Desktop** (for reproducible builds)
+* **Visual Studio Code** (with ESP-IDF extension)
+* **CP210x USB to UART Bridge VCP drivers** (for Windows)
+* **CMake**, **Ninja**, **clang-tidy**, **QEMU**, **Wokwi**
 
 ---
 
-## 📄 License
+
+## Author & Origin
+
+All content in this repository, including sections adapted from the [SCAN repository](https://github.com/jjsprandel/SCAN), was written by [Jonah Sprandel](https://github.com/jjsprandel). This template was adapted from the SCAN project to serve as a general ESP32 project template for ESP-IDF.
+
+---
+
+## License
 
 See [LICENSE](LICENSE) for details.
 
