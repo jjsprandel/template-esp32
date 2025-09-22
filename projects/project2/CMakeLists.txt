@@ -11,7 +11,6 @@ set(EXTRA_COMPONENT_DIRS
 set(COMPONENT_DIRS 
     "$ENV{IDF_PATH}/components"
     "$ENV{PROJECT_DIR}/projects/project2/src/app"
-    "$ENV{PROJECT_DIR}/projects/project2/src/app/device_drivers"
     "$ENV{EXTRA_COMPONENT_DIRS}"
 )
 
